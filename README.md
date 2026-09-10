@@ -41,14 +41,22 @@ No build tools, package managers, or server-side code are required — it's a st
 - Master of Computer Applications (MCA) — Accurate Institute of Management & Technology (Dr. A.P.J. Abdul Kalam Technical University, Lucknow), 2023 – 2025.
 - Bachelor of Computer Applications (BCA) — Jamuni Lal College, Hajipur (Babasaheb Bhimrao Ambedkar Bihar University, Muzaffarpur), 2019 – 2022.
 
-**Certifications & Achievements:**
-- **AI Foundation Course** — Jio Institute (AI Classroom powered by JioPC). Certificate ID: `96oGEl2zwP7a`.
-- **Data Analyst 101** — Simplilearn SkillUp (Microsoft Courses). Certificate code: `10661081`, completed 28 Aug 2026.
-- **Introduction to Generative AI Studio** — Google Cloud Skills Boost. Certificate code: `10660673`, completed 28 Aug 2026.
+**Certifications & Achievements** (as shown, ISRO listed first):
+1. **AI/ML for Geodata Analytics** — Indian Institute of Remote Sensing (IIRS), ISRO. Enrolment No. `2026235032271`, 3–14 Aug 2026.
+2. **AI Foundation Course** — Jio Institute (AI Classroom powered by JioPC). Certificate ID: `96oGEl2zwP7a`.
+3. **Data Analyst 101** — Simplilearn SkillUp (Microsoft Courses). Certificate code: `10661081`, completed 28 Aug 2026.
+4. **Introduction to Generative AI Studio** — Google Cloud Skills Boost. Certificate code: `10660673`, completed 28 Aug 2026.
+5. **C++** — Sololearn. Certificate `CT-HVXKG8OQ`, issued 16 Jun 2020.
+6. **Python Core** — Sololearn. Certificate `CT-LY9RX0AW`, issued 13 Jul 2021.
 
-**Featured Projects:**
-- **DineDesk — Restaurant Ordering Platform** (CodSoft Task 2). A full-stack restaurant ordering and table management system supporting online orders, table reservations, digital menus, and kitchen operations with role-based access (Admin, Staff, Customer). Stack: React + Tailwind CSS v4 (50%), Node.js + Express API (30%), SQLite + JWT Auth (20%). [Source](https://github.com/Chhotukumar70/CODSOFT_Task2_Restaurant_Ordering_Platform)
-- **EduManage — Student Management System** (CodSoft Task 1). A full-stack student management application featuring CRUD operations, attendance tracking, result management, and fee ledger. Stack: React + Vite + Tailwind CSS (50%), Node.js + Express API (30%), SQLite + JWT Auth (20%). [Source](https://github.com/Chhotukumar70/CODSOFT_Task1_Student_Management_System)
+All six are displayed in a single unified certifications panel (one dark card, divided rows) rather than separate cards.
+
+**Featured Projects** (all 5 CodSoft internship tasks):
+1. **EduManage — Student Management System** (Task 1). CRUD operations, attendance tracking, result management, and fee ledger. Stack: React + Vite + Tailwind CSS (50%), Node.js + Express API (30%), SQLite + JWT Auth (20%). [Source](https://github.com/Chhotukumar70/CODSOFT_Task1_Student_Management_System)
+2. **DineDesk — Restaurant Ordering Platform** (Task 2). Online orders, table reservations, digital menus, kitchen operations, role-based access. Stack: React + Tailwind CSS v4 (50%), Node.js + Express API (30%), SQLite + JWT Auth (20%). [Source](https://github.com/Chhotukumar70/CODSOFT_Task2_Restaurant_Ordering_Platform)
+3. **CareerHub — Job Portal Platform** (Task 3). Job listings, application tracking pipelines, candidate profiles, JWT authentication. Stack: React + Vite + Tailwind CSS (50%), Node.js + Express API (30%), SQLite + JWT Auth (20%). [Source](https://github.com/Chhotukumar70/CODSOFT_Task3_Job_Portal)
+4. **MarketHub — Multi-Vendor E-Commerce Marketplace** (Task 4). Multi-vendor cart splitting, seller/admin dashboards. Stack: React + Vite + Tailwind CSS (50%), Node.js + Express API (30%), SQLite + JWT Auth (20%). [Source](https://github.com/Chhotukumar70/CODSOFT_Task4_Multi_Vendor_Ecommerce_Marketplace)
+5. **FleetFlow — Logistics & Fleet Management Platform** (Task 5). Shipments, drivers, vehicles, routes, warehouses, status audit trails, multi-role dashboards. Stack: React + Vite + Tailwind CSS (50%), Node.js + Express API (30%), SQLite + JWT Auth (20%). [Source](https://github.com/Chhotukumar70/CODSOFT_Task5_Logistics_And_Fleet_Management_Platform)
 
 ---
 
@@ -66,12 +74,15 @@ No build tools, package managers, or server-side code are required — it's a st
 │   ├── profile.webp                    # Background-removed profile photo (hero)
 │   └── proj_1_screenshot.jpg           # Extra asset (Personal Portfolio Website preview, not currently linked on the page)
 └── certificates/
+    ├── AIML_for_Geodata_Analytics_ISRO_Certificate.pdf
     ├── AI_Foundation_Course_Certificate.pdf
     ├── Data_Analyst_101.pdf
-    └── Introduction_to_Generative_AI_Studio__Google_Cloud_.pdf
+    ├── Introduction_to_Generative_AI_Studio__Google_Cloud_.pdf
+    ├── Cpp_Certificate_Sololearn.pdf
+    └── Python_Core_Certificate_Sololearn.pdf
 ```
 
-> Each "View Certificate" button on the Certifications & Achievements section links directly to its PDF in `certificates/`. To add or replace a certificate, drop the PDF into that folder and update the matching `href` in `index.html`.
+> Each "View Certificate" button in the Certifications & Achievements panel links directly to its PDF in `certificates/`. To add or replace a certificate, drop the PDF into that folder and add/update the matching row + `href` in `index.html`.
 
 ---
 

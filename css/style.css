@@ -573,57 +573,60 @@ section + section{ border-top: 1px solid var(--border); }
 .work-more p{ color: var(--text-muted); font-size: 0.94rem; }
 .work-more strong{ color: var(--text); display: block; margin-bottom: 4px; font-family: var(--font-display); font-size: 1.1rem; }
 
-/* ---------------------------------- CERTIFICATIONS ---------------------------------- */
-.cert-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
-}
-.cert-card{
+/* ---------------------------------- CERTIFICATIONS (unified panel) ---------------------------------- */
+.cert-panel{
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 30px;
+  padding: 8px 28px;
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 24px 54px -30px rgba(0,0,0,0.7);
 }
-.cert-card::before{
+.cert-panel::before{
   content: "";
   position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-4));
+  background: linear-gradient(90deg, var(--accent), var(--accent-4), var(--accent-3), var(--accent-2), var(--accent-5));
 }
-.cert-card:nth-child(2)::before{ background: linear-gradient(90deg, var(--accent-2), var(--accent-5)); }
-.cert-card:nth-child(3)::before{ background: linear-gradient(90deg, var(--accent-3), var(--accent-4)); }
-.cert-card:hover{ border-color: var(--border-strong); transform: translateY(-4px); box-shadow: 0 20px 46px -26px rgba(0,0,0,0.65); }
-.cert-card .cert-ic{
-  width: 46px; height: 46px;
-  border-radius: 12px;
-  background: var(--accent-soft);
-  color: var(--accent);
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 20px;
+.cert-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 26px 0;
+  border-top: 1px solid var(--border);
 }
-.cert-card:nth-child(2) .cert-ic{ background: var(--accent-2-soft); color: var(--accent-2); }
-.cert-card:nth-child(3) .cert-ic{ background: var(--accent-3-soft); color: var(--accent-3); }
-.cert-card .cert-ic svg{ width: 22px; height: 22px; }
-.cert-card h3{ font-size: 1.1rem; margin-bottom: 6px; }
-.cert-issuer{ color: var(--text-muted); font-size: 0.92rem; margin-bottom: 10px; }
+.cert-row:first-child{ border-top: none; }
+.cert-info h3{ font-size: 1.05rem; margin-bottom: 5px; }
+.cert-issuer{ color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px; }
 .cert-id{
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--text-faint);
-  margin-bottom: 22px;
   display: inline-block;
-  padding: 4px 10px;
+  padding: 3px 10px;
   border: 1px solid var(--border-strong);
   border-radius: 20px;
-  align-self: flex-start;
 }
-.cert-card .btn{ margin-top: auto; }
-.cert-card .cert-actions{ margin-top: auto; }
+.btn-cert{
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 10px;
+  background: var(--accent-4);
+  color: var(--ink-on-accent);
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  flex-shrink: 0;
+}
+.btn-cert:hover{ transform: translateY(-2px); opacity: 0.88; box-shadow: 0 10px 26px -10px rgba(251,123,176,0.55); }
+@media (max-width: 600px){
+  .cert-panel{ padding: 4px 20px; }
+  .cert-row{ flex-direction: column; align-items: flex-start; gap: 14px; }
+  .btn-cert{ width: 100%; text-align: center; }
+}
 
 /* ---------------------------------- FEATURED PROJECTS (grid of two) ---------------------------------- */
 .projects-grid{
@@ -652,6 +655,15 @@ section + section{ border-top: 1px solid var(--border); }
 }
 .project-card.project-dinedesk::before{
   background: linear-gradient(90deg, var(--accent-5), var(--accent-2));
+}
+.project-card.project-careerhub::before{
+  background: linear-gradient(90deg, var(--accent-3), var(--accent-5));
+}
+.project-card.project-markethub::before{
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+}
+.project-card.project-fleetflow::before{
+  background: linear-gradient(90deg, var(--accent-4), var(--accent-3));
 }
 .project-card:hover{ border-color: var(--border-strong); transform: translateY(-4px); box-shadow: 0 24px 54px -28px rgba(0,0,0,0.65); }
 .project-card p{ color: var(--text-muted); margin-bottom: 4px; }
@@ -808,7 +820,6 @@ footer a:hover{ color: var(--accent); }
   .project-feature, .project-secondary{ grid-template-columns: 1fr; }
   .project-feature .p-media, .project-secondary .p-media, .mock-panel{ min-height: 240px; }
   .contact-grid{ grid-template-columns: 1fr 1fr; }
-  .cert-grid{ grid-template-columns: 1fr; }
   .projects-grid{ grid-template-columns: 1fr; }
 }
 
